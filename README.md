@@ -1,5 +1,5 @@
-# 个人上手项目
-目前更新python脚本
+# python脚本
+目前更新
 
 biaoqingbao.py    ------爬取表情包
 
