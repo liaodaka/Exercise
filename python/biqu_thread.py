@@ -62,17 +62,6 @@ def PutPageJob(para):
     links = para[2]
     q.put(PageJob(i, links[i]))
 
-
-def get_content(target):
-    reqs = requests.get(url=target)
-    reqs.encoding = 'utf-8'
-    hals = reqs.text
-    bf = BeautifulSoup(hals, 'lxml')
-    texts = bf.find('div', id='content')
-    contents = texts.text.strip().split('\xa0' * 4)
-    return contents
-
-
 if __name__ == '__main__':
     start_time = time()
     spider = Spider()
